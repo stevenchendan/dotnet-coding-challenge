@@ -4,7 +4,7 @@ using System.Text;
 
 namespace dotnet_code_challenge.Models
 {
-    class Racing
+    public class Racing
     {
         public string Name { get; set; }
 

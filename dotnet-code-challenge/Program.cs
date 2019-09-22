@@ -1,11 +1,14 @@
 ﻿using System;
 using System.IO;
+using dotnet_code_challenge.Helpers;
 using Microsoft.Extensions.Configuration;
 
 namespace dotnet_code_challenge
 {
     class Program
     {
+        private static readonly IRacingFileReader FileReader = new RacingFileReader();
+
         static void Main(string[] args)
         {
 
@@ -16,8 +19,9 @@ namespace dotnet_code_challenge
             var root = configurationBuilder.Build();
 
             string feedDataLocation = root["FeedDataLocation"];
-
-            Console.WriteLine("Hello World!");
+            FileReader.DisplayHorsesFromFile(feedDataLocation);
+            Console.WriteLine("Finish!");
+            Console.ReadLine();
         }
     }
 }
