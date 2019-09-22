@@ -15,6 +15,7 @@ namespace dotnet_code_challenge
             configurationBuilder.AddJsonFile(path, false);
             var root = configurationBuilder.Build();
 
+            string feedDataLocation = root["FeedDataLocation"];
 
             Console.WriteLine("Hello World!");
         }
