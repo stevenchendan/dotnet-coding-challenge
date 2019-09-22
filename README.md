@@ -1,31 +1,28 @@
 # .NET Code Challenge
 
-You've been provided with the shell of a .Net application in Visual Studio with some sample inputs 
+## 1. Background:
 
-Create an application which outputs the horse names in price ascending order. 
+This is a coding challenge which output horses into console.
 
-The code should be at a standard you'd feel comfortable with putting in production.
+## 2. Running Application:
 
-## Background
+Please make sure you have Visual studio installed in your computer.
 
-The source data reflects how BetEasy has different providers of data which feed our website.
+If you do not have Visual studio please make sure you install .net core manully.
 
-The data files are used allows creation of different races:
-* Caulfield_Race1.xml https://beteasy.com.au/racing-betting/horse-racing/caulfield/20171216/race-1-798068-25502504  
-* Wolferhampton_Race1.json https://beteasy.com.au/racing-betting/horse-racing/wolverhampton/20171213/race-1-797507-25500650
+After download this application to your computer, open the dotnet-code-challenge.sln with visual studio.
 
-## Guidelines
+Then press Ctrl + F5 or just click the Run button at the top of Visual studio.
 
-You can either complete the test prior to the interview or come in and do it as part of the technical interview. The application shell provided is a suggestion only, if C#/.Net isn't your preferred language/Framework please use what you're most comfortable with.
 
-### At Home
-* Please limit your time to 2 hours. If you don't complete it within this time just let us know what is outstanding.
-* Commit your code at regular intervals so we can see how you reached your solution
-* Once completed push to a public repo and share the link with us
-* Please replace this ReadMe with any setup required
+## 3. Recommended improvements:
 
-### At BetEasy
-* The goal of this challenge is not to complete the exercise, but to give us an understanding on how you tackle problems. Please talk us through your thinking process & assumptions as you go.
-* Feel free to use any resources you would normally use (Google, StackOverflow etc.)
-* Please ask any questions you wish
-* The coding exercise will be done on the developer test laptop (1141): Test // Wagering99
+Due to lack of time there are some more work to do:
+
+- Use Dependency injection to write some unit tests
+- Better logging system(handle exception)
+- More defensive code
+- Handle currency given different country or culture
+- some methods are too big and not test friendly, need to wrap up into small pieces
+- If this is real application I would recommend to host this application on AWS and use api gateway + lambda(.net core) + DynamoDb +  Cloudwatch + SNS topic... to build a serverless application.
+- Add docker
